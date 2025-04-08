@@ -1,1 +1,1 @@
-Smash Ultimate L-Canceling Updated for Smashline 2
+**Smash Ultimate L-Canceling Updated for Smashline 2**
