@@ -2,7 +2,7 @@ use smash::{hash40, app, Result, lib::lua_const::*, app::lua_bind::*};
 use crate::utils::*;
 use crate::L_Cancels::l_cancel_flag;
 
-const option_A_or_B: &str = "B";
+const option_A_or_B: &str = "A";
 
 /*  Two types of L-Cancel implementations:
 
@@ -24,13 +24,13 @@ unsafe fn get_param_float_hook(boma: &mut app::BattleObjectModuleAccessor, param
                 return original!()(boma, param_type, param_hash) / 2.;
             }
         }
-        else if option_A_or_B == "B" { //option B
+        /*else if option_A_or_B == "B" { //option B
             if !l_cancel_flag[get_player_number(boma)] { 
                 return original!()(boma, param_type, param_hash) * 2.;
             }
         }
     
-    }
+    }*/
 
     original!()(boma, param_type, param_hash)
 }
